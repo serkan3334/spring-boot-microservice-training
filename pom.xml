@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <!--Bizim projemiz spring boot projesidir Bunu belirtmek için PArent olarak spring boot eklememiz lazım
+    Sprin.io daki her seyi kullanmamızı sagliyor-->
+
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.2.4.RELEASE</version>
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
+
+    <!-- şimdi de devtools ile lombok u ekledik -->
+    <!-- depedency'leri  dependencies  içerisine koyman gerekiyor-->
+<dependencies>
+    <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-devtools</artifactId>
+        <scope>runtime</scope>
+        <optional>true</optional>
+    </dependency>
+    <dependency>
+        <groupId>org.projectlombok</groupId>
+        <artifactId>lombok</artifactId>
+        <optional>true</optional>
+    </dependency>
+</dependencies>
+
+
+    <groupId>spring-boot-microservice-training</groupId>
+    <artifactId>spring-boot-microservice-training</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <!-- YAvrularını module olarak ekle -->
+
+    <modules>
+        <module>solviads-training-ui</module>
+        <module>solviads-training-data</module>
+        <module>solviads-training-mail</module>
+    </modules>
+
+
+</project>
